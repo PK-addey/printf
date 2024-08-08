@@ -4,11 +4,8 @@
 * @format: identifier to look for.
 * Return: the length of the string.
 */
-
-
-int _printf(const char *format, ...)
+print_t formats[] =
 {
-print_t formats[] = {
 {"%s", print_string},
 {"%c", print_char},
 {"%%", print_37},
@@ -20,6 +17,8 @@ print_t formats[] = {
 {"%x", print_hex}
 };
 
+int _printf(const char *format, ...)
+{
 va_list args;
 int i = 0, j, length = 0;
 
@@ -32,8 +31,7 @@ while (format[i] != '\0')
 j = 8;
 while (j >= 0)
 {
-if (format[i + 1] != '\0' && formats[j].id[0] == format[i] && formats[j].id[1]
-== format[i + 1])
+if (formats[i+1] != '\0' && formats[j].id[0] == format[i] && formats[j].id[1] == format[i + 1])
 {
 length += formats[j].f(args);
 i = i + 2;
