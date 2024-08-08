@@ -22,7 +22,7 @@ return (-1);
 
 while (format[i] != '\0')
 {
-j = 8;
+j = 9;
 while (j >= 0)
 {
 if (format[i + 1] != '\0' && formats[j].id[0] == format[i] && formats[j].id[1]
