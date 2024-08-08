@@ -9,7 +9,7 @@
 typedef struct format
 {
     char *id;
-    int (*f)(va_list);
+    int (*f)();
 } print_t;
 
 int _printf(const char *format, ...);
