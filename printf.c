@@ -8,17 +8,10 @@
 
 int _printf(const char *format, ...)
 {
-print_t formats[] = {
-{"%s", print_string},
-{"%c", print_char},
-{"%%", print_37},
-{"%i", print_int},
-{"%d", print_dec},
-{"%b", print_bin},
-{"%u", print_unsigned},
-{"%o", print_oct},
-{"%x", print_hex}
-};
+print_t formats[] = {{"%s", print_string}, {"%c", print_char}, {"%%", print_37}
+, {"%i", print_int}, {"%d", print_dec}, {"%b", print_bin},
+{"%u", print_unsigned}, {"%o", print_oct},
+{"%x", print_hex}};
 
 va_list args;
 int i = 0, j, length = 0;
