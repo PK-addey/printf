@@ -13,7 +13,7 @@ print_t formats[] = {{"%s", print_string}, {"%c", print_char}, {"%%", print_37}
 , {"%i", print_int}, {"%d", print_dec}, {"%b", print_bin},
 {"%u", print_unsigned}, {"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX}
 , {"%S", print_exc_string}, {"%p", print_pointer}, {"%r", print_revs},
-{"%R", print_rot13};
+{"%R", print_rot13}};
 
 va_list args;
 int i = 0, j, length = 0;
